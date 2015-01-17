@@ -11,7 +11,8 @@ Krke.prototype.Search = function(query) {
 		},
 		success: function(data, status, xhr) {
 			var json = jQuery.parseJSON(data);
-			this.tracklist = json.track_list;
+			this.tracklist = json.message.body.track_list;
+			console.log(this.tracklist);
 		}
 	});
 };
