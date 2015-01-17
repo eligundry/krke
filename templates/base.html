@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>{% block title %}krke{% endblock %}</title>
+	</head>
+	<body>
+		<header role="header">
+			{% block header %}{% endblock %}
+		</header>
+
+		<main role="main">
+			{% block body %}{% endblock %}
+		</main>
+
+		<footer role="contentinfo">
+			{% block footer %}{% endblock %}
+		</footer>
+	</body>
+</html>

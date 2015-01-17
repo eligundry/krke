@@ -1,5 +1,7 @@
-from flask import Flask
+from flask import Flask, render_template
 import requests as rekt
+
+MUSIXMATCH_API_KEY = 'a87d5804cbe38a1afd0de1dc263cbea1'
 
 app = Flask(__name__)
 
