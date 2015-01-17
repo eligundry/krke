@@ -30,6 +30,10 @@ Krke.prototype.Search = function(query) {
 	});
 };
 
+Krke.prototype.GetAudio = function(service, id) {
+
+};
+
 Krke.prototype.GetLyrics = function(track_id) {
 	var self = this;
 
@@ -45,4 +49,9 @@ Krke.prototype.GetLyrics = function(track_id) {
 			});
 		}
 	})
+};
+
+Krke.prototype.ToggleViews = function() {
+	this.settings.elements.player.toggleClass('hidden');
+	this.settings.elements.search.toggleClass('hidden');
 };

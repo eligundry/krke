@@ -11,8 +11,9 @@
 	});
 
 	main_el
-	.on('click', '.thumbnail', function(event) {
-		event.preventDefault();
+	.on('click', '.service-button', function(event) {
+		krke.GetAudio($(this).attr('data-service'), $(this).attr('data-target'));
 		krke.GetLyrics($(this).attr('data-target'));
+		krke.ToggleViews();
 	});
 })(jQuery);

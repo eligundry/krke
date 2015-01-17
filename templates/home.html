@@ -30,7 +30,7 @@
 {% block content %}
 <main role="main">
 	<div class="search"></div>
-	<div class="player">
+	<div class="player hidden">
 		<div id="lyrics"></div>
 	</div>
 </main>
@@ -50,10 +50,10 @@
 		<div class="caption">
 			<h4>'{{:track.track_name}}' by {{:track.artist_name}}</h4>
 			{{if track.track_soundcloud_id}}
-			<a class="btn soundcloud-link" href="#{{:track.track_soundcloud_id}}" data-target="{{:track.track_soundcloud_id}}">Soundcloud</a>
+			<a class="btn btn-default service-button" href="#{{:track.track_soundcloud_id}}" data-target="{{:track.track_soundcloud_id}}" data-service="soundcloud">Soundcloud</a>
 			{{/if}}
 			{{if track.track_spotify_id}}
-			<a class="btn spotify-link" href="#{{:track.track_spotify_id}}" data-target="{{:track.track_spotify_id}}">Spotify</a>
+			<a class="btn btn-default service-button" href="#{{:track.track_spotify_id}}" data-target="{{:track.track_spotify_id}}" data-service="spotify">Spotify</a>
 			{{/if}}
 		</div>
 	</div>
