@@ -4,6 +4,8 @@ function Krke() {
 }
 
 Krke.prototype.Search = function(query) {
+	var self = this;
+
 	jQuery.ajax({
 		method: 'POST',
 		url: '/search',
@@ -12,11 +14,10 @@ Krke.prototype.Search = function(query) {
 		},
 		success: function(data, status, xhr) {
 			var json = jQuery.parseJSON(data);
-			this.tracklist = json.message.body.track_list;
-			console.log(this.tracklist);
-			var self = this;
-			var html = this.card_template.render(self.tracklist);
-			$('main').html(html);
+			self.tracklist = json.message.body.track_list;
+			console.log(self.tracklist);
+			var output = self.card_template.render(self.tracklist);
+			$('main').html(output);
 		}
 	});
 };
