@@ -12,6 +12,7 @@
 
 	main_el
 	.on('click', '.thumbnail', function(event) {
-		krke.GetLyrics($KK)
+		event.preventDefault();
+		krke.GetLyrics($(this).attr('data-target'));
 	});
 })(jQuery);

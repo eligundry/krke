@@ -15,7 +15,7 @@ def home():
 @app.route('/search', methods=['POST'])
 def search():
     """
-    Searches an undetermined source for a song
+    Searches an MusixMatch for a song
     """
     data = {
         'q': request.form['query'] or None,
@@ -29,13 +29,20 @@ def search():
 
     return result.text
 
-@app.route('/lyrics')
-def lyrics():
+@app.route('/lyrics/<track_id>')
+def lyrics(track_id):
     """
     Returns the synced lyrics from musixmatch
     https://developer.musixmatch.com/documentation
     """
-    return 'lyrics'
+    data = {
+        'track_id': track_id,
+        'apikey': MUSIXMATCH_API_KEY,
+    }
+
+    result = rekt.get(MUSIXMATCH_URL + 'track.subtitles.get', params=data)
+
+    return result.text
 
 if __name__ == '__main__':
     app.debug = True
