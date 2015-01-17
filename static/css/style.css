@@ -1,0 +1,13 @@
+.song-card .no-cover {
+	width: 350px;
+	background: #EEEEEE;
+	text-align: center;
+	padding: 167px 0;
+	margin: 0 auto;
+}
+
+.song-card h4 {
+	text-overflow: ellipsis;
+	overflow: hidden;
+	white-space: nowrap;
+}

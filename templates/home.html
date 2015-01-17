@@ -1,5 +1,10 @@
 {% extends "bootstrap/base.html" %}
 
+{% block styles %}
+{{ super() }}
+<link rel="stylesheet" href="/static/css/style.css" />
+{% endblock %}
+
 {% block navbar %}
 <nav class="navbar navbar-default">
 	<div class="container-fluid">
@@ -26,14 +31,20 @@
 
 {% raw %}
 <script id="song-card" type="text/x-jsrender">
-	<div class="col-sm-6 col-md-4">
-		<div class="thumbnail">
-			<img src="{{:track.album_coverart_350x350}}" alt="...">
-			<div class="caption">
-			<h3>'{{:track.track_name}}' by {{:track.artist_name}}</h3>
-			</div>
+<div class="col-sm-6 col-md-4 song-card">
+	<div class="thumbnail">
+	{{if track.album_coverart_350x350}}
+		<img src="{{:track.album_coverart_350x350}}" alt="{{:track.album_name}}">
+	{{else}}
+		<div class="no-cover">
+			{{:track.album_name}}
+		</div>
+	{{/if}}
+		<div class="caption">
+			<h4>'{{:track.track_name}}' by {{:track.artist_name}}</h4>
 		</div>
 	</div>
+</div>
 </script>
 {% endraw %}
 {% endblock %}

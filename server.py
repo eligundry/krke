@@ -21,6 +21,8 @@ def search():
         'q': request.form['query'] or None,
         'apikey': MUSIXMATCH_API_KEY,
         'format': 'json',
+        's_track_rating': 'desc',
+        'f_has_lyrics': 'true',
     }
 
     result = rekt.get(MUSIXMATCH_URL + 'track.search', params=data)
