@@ -2,7 +2,7 @@ from flask import Flask, render_template, request
 from flask_bootstrap import Bootstrap
 import requests as rekt
 
-MUSIXMATCH_API_KEY = 'a87d5804cbe38a1afd0de1dc263cbea1'
+MUSIXMATCH_API_KEY = '1ded3ade3e63977aef9212b43320afb1'
 MUSIXMATCH_URL = 'http://api.musixmatch.com/ws/1.1/'
 
 app = Flask(__name__)
