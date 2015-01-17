@@ -9,6 +9,8 @@ Possibly could use this...: http://stackoverflow.com/questions/3673042/algorithm
 
 ~~Documentation: http://oampo.github.io/Audiolet/api.html~~
 
+Github Markdow Cheatsheet: https://help.github.com/articles/github-flavored-markdown/ 
+
 ## Installation
 
 Requirements:
