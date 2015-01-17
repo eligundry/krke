@@ -32,7 +32,7 @@
 {% raw %}
 <script id="song-card" type="text/x-jsrender">
 <div class="col-sm-6 col-md-4 song-card">
-	<div class="thumbnail">
+<a href="#{{:track.track_id}}" class="thumbnail" data-genre='{{if track.primary_genres.music_genre_list.length > 0}}{{:track.primary_genres.music_genre_list[0].music_genre.music_genre_name}}{{/if}}'>
 	{{if track.album_coverart_350x350}}
 		<img src="{{:track.album_coverart_350x350}}" alt="{{:track.album_name}}">
 	{{else}}
@@ -43,7 +43,7 @@
 		<div class="caption">
 			<h4>'{{:track.track_name}}' by {{:track.artist_name}}</h4>
 		</div>
-	</div>
+	</a>
 </div>
 </script>
 {% endraw %}

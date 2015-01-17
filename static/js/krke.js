@@ -21,3 +21,7 @@ Krke.prototype.Search = function(query) {
 		}
 	});
 };
+
+Krke.prototype.GetLyrics = function(track_id) {
+
+};
