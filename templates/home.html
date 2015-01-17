@@ -1,0 +1,31 @@
+{% extends "bootstrap/base.html" %}
+
+{% block navbar %}
+<nav class="navbar navbar-default">
+	<div class="container-fluid">
+		<div class="navbar-header">
+			<button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="top-navbar">
+				<span class="sr-only">Toggle Navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<a class="navbar-brand" href="#">krke</a>
+		</div>
+		<form class="navbar-form navbar-right" action="/search" method="POST">
+			<input id="music-search" class="form-control" type="search" name="music-search" placeholder="Search for music...">
+			<button id="music-search-submit" type="submit" name="music-search-submit">Submit</button>
+		</form>
+	</div>
+</nav>
+{% endblock %}
+
+{% block content %}
+<main role="main">
+</main>
+{% endblock %}
+
+{% block scripts %}
+<script src='/assets/krke.js'></script>
+<script src='/assets/controls.js'></script>
+{% endblock %}
