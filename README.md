@@ -5,7 +5,9 @@ Created by David Patuwo, =ADD NAMES HERE=
 
 READ THIS JACK: http://stackoverflow.com/questions/3673042/algorithm-to-remove-vocal-from-sound-track
 
-Just in case pico is too lightweight: https://github.com/oampo/Audiolet
+Just in case pico is too lightweight: https://github.com/oampo/Audiolet 
+
+Documentation: http://oampo.github.io/Audiolet/api.html
 
 ## Installation
 
