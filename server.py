@@ -4,6 +4,7 @@ import requests as rekt
 
 MUSIXMATCH_API_KEY = '1ded3ade3e63977aef9212b43320afb1'
 MUSIXMATCH_URL = 'http://api.musixmatch.com/ws/1.1/'
+SPOTIFY_URL = 'https://api.spotify.com/v1/tracks/'
 
 app = Flask(__name__)
 Bootstrap(app)

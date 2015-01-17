@@ -12,8 +12,12 @@
 
 	main_el
 	.on('click', '.service-button', function(event) {
-		krke.GetAudio($(this).attr('data-service'), $(this).attr('data-target'));
-		krke.GetLyrics($(this).attr('data-target'));
+		var service = $(this).attr('data-service'),
+			service_id = $(this).attr('data-target')
+			lyrics_id = $(this).parents('.thumbnail').attr('data-target');
+
 		krke.ToggleViews();
+		krke.GetLyrics(lyrics_id);
+		krke.GetAudio(service, service_id);
 	});
 })(jQuery);
